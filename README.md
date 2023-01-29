@@ -1,1 +1,2 @@
-# GiveWithYourSoul
+# GiveWithYourSoul 
+Реализация макета страницы "Дари Душой" из Figma в рамках обучения
