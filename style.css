@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  outline: none;
+}
+
+.root {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 1fr 20%;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  color: #333333;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 20%;
+}
+
+.menu {
+  min-width: 5vw;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+  color: #333333;
+}
+
+.menu1 {
+  margin-left: auto;
+}
+
+.main {
+  margin-top: 5px;
+  grid-area: main;
+  min-height: auto;
+}
+
+.pictConteiner {
+  max-width: 100%;
+  padding-top: 48.61%;
+  background-image: url("assets/WomanOnHorse.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  background-color: chartreuse;
+  border-radius: 20px;
+  position: relative;
+}
+
+.minitext {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px 20px;
+  gap: 10px;
+  max-width: 100%;
+  max-height: 54px;
+  position: absolute;
+  left: 5%;
+  top: 40%;
+
+  background: #dfa650;
+  border-radius: 40px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 34px;
+  color: #ffffff;
+}
+
+.pict {
+  color: white;
+  position: absolute;
+  padding-left: 5%;
+  top: 50%;
+  font-size: 5vw;
+  font-style: normal;
+}
+
+.button1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  gap: 10px;
+
+  background: #f6f1e4;
+  border-radius: 50px;
+}
+
+.blok {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 3%;
+  height: 10%;
+}
+
+.desk {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 10% 1fr 30%;
+  height: auto;
+  margin: 1px;
+}
+
+.text {
+  grid-area: 1 / 1 / 2 / 4;
+  text-align: center;
+}
+
+.container {
+  display: contents;
+}
+
+.container1 {
+  border-radius: 20px;
+  box-shadow: 0 5px 10px gray;
+}
+
+.img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.imgtext {
+  text-align: center;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  gap: 10px;
+
+  background: #547147;
+  border-radius: 40px;
+}
+
+.FAQ {
+  display: grid;
+}
+
+.footer {
+  grid-area: footer;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
