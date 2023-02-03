@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="GiveWithYourSoul\normalize.css" />
+    <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <title>Дари Душой</title>
   </head>
   <body>
@@ -13,8 +19,8 @@
       <header class="header">
         <div class="logo">
           <svg
-            max-width="200"
-            max-height="64"
+            width="200"
+            height="64"
             viewBox="0 0 200 64"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -205,27 +211,27 @@
           </svg>
         </div>
         <nav class="menu">
-          <a class="menu" href="catalog.html">Каталог</a>
-          <a class="menu" href="promotions.html">Акции</a>
-          <a class="menu" href="contacts.html">Контакты</a>
-          <address class="menu menu1">+7 (000) 000-00-00</address>
-          <a class="menu" href="https://vk.com">
+          <a class="menu__item" href="catalog.html">Каталог</a>
+          <a class="menu__item" href="promotions.html">Акции</a>
+          <a class="menu__item" href="contacts.html">Контакты</a>
+          <address class="menu__item menu__address">+7 (000) 000-00-00</address>
+          <a class="menu__item" href="https://vk.com">
             <img src="assets/VK.png" alt="vk icon"
           /></a>
-          <a class="menu" href="https://instagram.com">
+          <a class="menu__item" href="https://instagram.com">
             <img src="assets/Insta.png" alt="inst icon"
           /></a>
         </nav>
       </header>
       <br />
       <main class="main">
-        <div class="pictConteiner">
+        <div class="pict-conteiner">
           <div class="minitext">от 990 р</div>
           <p class="pict">КОННАЯ ПРОГУЛКА</p>
-          <button class="button1">Заказать впечатление</button>
+          <button class="button-pict">Заказать впечатление</button>
         </div>
         <section class="blok">
-          <div class="blok">
+          <div class="blok__attachment">
             <svg
               width="70"
               height="70"
@@ -282,9 +288,9 @@
                 stroke-linecap="square"
               />
             </svg>
-            Впечатления по цене партнера
+            <p>Впечатления по цене партнера</p>
           </div>
-          <div class="blok">
+          <div class="blok__attachment">
             <svg
               width="70"
               height="70"
@@ -343,9 +349,9 @@
                 stroke-linecap="round"
               />
             </svg>
-            Бесплатная доставка в день заказа
+            <p>Бесплатная доставка в день заказа</p>
           </div>
-          <div class="blok">
+          <div class="blok__attachment">
             <svg
               width="70"
               height="70"
@@ -406,9 +412,9 @@
                 stroke-linecap="round"
               />
             </svg>
-            Красивые сертификаты на любое впечатление
+            <p>Красивые сертификаты на любое впечатление</p>
           </div>
-          <div class="blok">
+          <div class="blok__attachment">
             <svg
               width="70"
               height="70"
@@ -459,39 +465,39 @@
                 stroke-linejoin="round"
               />
             </svg>
-            Проверенные партнеры
+            <p>Проверенные партнеры</p>
           </div>
         </section>
 
         <section class="desk">
           <div class="text">КАТАЛОГ ВПЕЧАТЛЕНИЙ</div>
           <div class="container">
-            <div class="container1">
+            <div class="container__content">
               <img class="img" src="assets/girl.png" alt="girl" />
               <p class="imgtext">Конная прогулка</p>
               <p class="imgtext">от 990 руб</p>
               <button class="button">Заказать</button>
             </div>
-            <div class="container1">
+            <div class="container__content">
               <img class="img" src="assets/paraplane.png" alt="paraplane" />
               <p class="imgtext">Полет на мотопараплане</p>
               <p class="imgtext">3000 руб</p>
               <button class="button">Заказать</button>
             </div>
-            <div class="container1">
-              <img class="img" src="assets\airTube.png" alt="airTube" />
+            <div class="container__content">
+              <img class="img" src="assets/airTube.png" alt="airTube" />
               <p class="imgtext">Полет в аэротрубе</p>
               <p class="imgtext">от 1800 руб</p>
               <button class="button">Заказать</button>
             </div>
-            <div class="container1">
-              <img class="img" src="assets\cupola.png" alt="cupola" />
+            <div class="container__content">
+              <img class="img" src="assets/cupola.png" alt="cupola" />
               <p class="imgtext">Вечер в куполе</p>
               <p class="imgtext">3000 руб</p>
               <button class="button">Заказать</button>
             </div>
-            <div class="container1">
-              <img class="img" src="assets\boat.png" alt="boat" />
+            <div class="container__content">
+              <img class="img" src="assets/boat.png" alt="boat" />
               <p class="imgtext">Прогулка на яхте</p>
               <p class="imgtext">от 3500 руб</p>
               <button class="button">Заказать</button>
@@ -500,17 +506,36 @@
         </section>
         <section class="FAQ">
           <div>
-            <h3>ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h3>
-            <p>Могу ли я купить сертификат в подарок?</p>
-            <p>Могу ли я поменять сертификат на другой?</p>
+            <h3 class="heading">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h3>
+            <details>
+              <summary class="dropdown">
+                Могу ли я купить сертификат в подарок?
+              </summary>
+              <p class="dropdown__text">
+                Конечно, вы можете купить любое количество сертификатов в
+                подарок. <br />
+                У нас также есть услуга отправки сертификата указанному вами
+                адресату.
+              </p>
+            </details>
+            <details>
+              <summary class="dropdown">
+                Могу ли я поменять сертификат на другой?
+              </summary>
+              <p class="dropdown__text">
+                Вы можете поменять сертификат на другой в рамках одной суммы.
+                <br />
+                Либо доплатить недостающую разницу стоимости.
+              </p>
+            </details>
           </div>
         </section>
       </main>
       <footer class="footer">
-        <div class="logo">
+        <div class="logoFooter">
           <svg
-            max-width="200"
-            max-height="64"
+            width="200"
+            height="64"
             viewBox="0 0 200 64"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -700,7 +725,32 @@
             />
           </svg>
         </div>
-        <div></div>
+        <section class="footer__menu">
+          <div class="footer__title">
+            <p>МЕНЮ</p>
+            <a class="menu__item__footer" href="catalog.html">Каталог</a>
+            <a class="menu__item__footer" href="promotions.html">Акции</a>
+            <a class="menu__item__footer" href="contacts.html">Контакты</a>
+          </div>
+          <div class="footer__phon">
+            <address class="menu__item__footer menu__address">
+              +7 (000) 000-00-00
+            </address>
+            <div class="footer__social">
+              <a class="menu__item__footer" href="https://vk.com">
+                <img src="assets/VK.png" alt="vk icon"
+              /></a>
+              <a class="menu__item__footer" href="https://instagram.com">
+                <img src="assets/Insta.png" alt="inst icon"
+              /></a>
+            </div>
+          </div>
+          <div class="footer__application">
+            <h3>Остались вопросы?</h3>
+            <p>Оставьте заявку, мы свяжемся с Вами в ближайшее время</p>
+            <button class="button">Оставить заявку</button>
+          </div>
+        </section>
       </footer>
     </div>
   </body>

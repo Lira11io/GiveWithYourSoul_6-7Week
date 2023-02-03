@@ -4,48 +4,59 @@
 }
 
 .root {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 10% 1fr 20%;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
   color: #333333;
+  margin: 15px;
+  font-family: "Montserrat", "Roboto", sans-serif;
+  font-style: normal;
+  line-height: normal;
 }
 
 .header {
-  grid-area: header;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
+/* Логотип в главном меню */
 .logo {
   width: 20%;
+  margin-right: 10%;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
+/* Оболочка главного меню */
 .menu {
   min-width: 5vw;
+  width: 100%;
+  display: flex;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Пункты главного меню*/
+.menu__item {
+  width: 100%;
   text-decoration: none;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   font-size: 18px;
   color: #333333;
 }
 
-.menu1 {
-  margin-left: auto;
+/* Пункт главного меню с адресом*/
+.menu__address {
+  margin-left: 10%;
+  margin-right: 5%;
+  min-width: 28%;
 }
 
 .main {
   margin-top: 5px;
-  grid-area: main;
   min-height: auto;
 }
 
-.pictConteiner {
+/* Главная фотография на странице */
+.pict-conteiner {
   max-width: 100%;
   padding-top: 48.61%;
   background-image: url("assets/WomanOnHorse.png");
@@ -58,89 +69,115 @@
   position: relative;
 }
 
+/* Запись о цене главной фотографии*/
 .minitext {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 10px 20px;
   gap: 10px;
   max-width: 100%;
+  min-width: 150px;
   max-height: 54px;
   position: absolute;
   left: 5%;
-  top: 40%;
+  top: 35%;
 
   background: #dfa650;
   border-radius: 40px;
 
-  font-style: normal;
   font-weight: 700;
   font-size: 30px;
-  line-height: 34px;
   color: #ffffff;
 }
 
+/* Надпись на главной фотографии*/
 .pict {
   color: white;
-  position: absolute;
+  position: relative;
   padding-left: 5%;
-  top: 50%;
-  font-size: 5vw;
-  font-style: normal;
+  top: 35%;
+  font-weight: 800;
+  font-size: 75pt;
 }
 
-.button1 {
+/* Кнопка "Заказать впечатление" */
+.button-pict {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 20px 30px;
   gap: 10px;
+  position: relative;
+  font-weight: 700;
+  font-size: 20px;
 
   background: #f6f1e4;
   border-radius: 50px;
 }
 
+/* Обертка для блока с предложениями*/
 .blok {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding-top: 3%;
+  padding-top: 25px;
   height: 10%;
+  font-weight: 600;
+  font-size: 16px;
 }
 
-.desk {
+/* Предложения */
+.blok__attachment {
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 10% 1fr 30%;
-  height: auto;
-  margin: 1px;
+  grid-template-columns: 1fr 2fr;
 }
 
+/* Оберка для блока с контентом*/
+.desk {
+  margin-top: 25px;
+}
+
+/* Заголовок контента "Каталог впечатлений" */
 .text {
-  grid-area: 1 / 1 / 2 / 4;
+  min-height: 2em;
   text-align: center;
+  font-weight: 700;
+  font-size: 40px;
 }
 
+/* Содержимое каталога впечатлений */
 .container {
-  display: contents;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
 }
 
-.container1 {
+/* Контент*/
+.container__content {
   border-radius: 20px;
   box-shadow: 0 5px 10px gray;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  font-weight: 600;
+  font-size: 30px;
 }
 
+/* Фотография контента*/
 .img {
   width: 100%;
   max-width: 100%;
   object-fit: cover;
 }
 
+/* Название конкретного предложения*/
 .imgtext {
   text-align: center;
 }
 
+/* Кнопка "Заказать"*/
 .button {
   display: flex;
   flex-direction: row;
@@ -148,17 +185,104 @@
   align-items: center;
   padding: 12px 24px;
   gap: 10px;
+  align-self: center;
 
   background: #547147;
   border-radius: 40px;
+  color: #ffffff;
 }
 
+/* Часто задаваемые вопросы*/
 .FAQ {
   display: grid;
+  min-height: 200px;
+  margin-bottom: 30px;
 }
 
+/* Заголовок блока с часто задаваемыми вопросами */
+.heading {
+  text-align: center;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+/* Вопрос */
+.dropdown {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+/* Выпадающий текст*/
+.dropdown__text {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/*Подвал*/
 .footer {
-  grid-area: footer;
-  grid-row-start: 3;
-  grid-row-end: 4;
+  display: flex;
+  align-items: center;
+}
+
+/* Обертка содержимого подвала*/
+.footer__menu {
+  min-width: 5vw;
+  width: 100%;
+  display: flex;
+}
+
+/* Логотип подвала*/
+.logoFooter {
+  width: 20%;
+  margin-right: 8%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+/* Обертка для основного меню подвала */
+.footer__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 80px;
+  width: 10%;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+/* Пункты меню подвала*/
+.menu__item__footer {
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  color: #333333;
+}
+
+/* Пункты меню с телефоном*/
+.footer__phon {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 600;
+  font-size: 26px;
+}
+
+/* Пункты меню футера с социальными сетями */
+.footer__social {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 70%;
+  font-weight: 600;
+  font-size: 26px;
+}
+
+/* Пункты меню подвала с обратной связью*/
+.footer__application {
+  margin-left: auto;
+  font-weight: 400;
+  font-size: 18px;
 }
